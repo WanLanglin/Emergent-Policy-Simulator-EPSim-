@@ -1,0 +1,65 @@
+site_name: EPSim Documentation
+site_description: Documentation for the Emergent Policy Simulator
+site_author: WanLanglin
+repo_url: https://github.com/WanLanglin/Emergent-Policy-Simulator-EPSim-
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mermaid2
+  - mathjax
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Theory:
+    - Core Theory: CORE_THEORY.md
+    - Algorithms: ALGORITHMS.md
+    - Experiments: EXPERIMENTS.md
+  - Usage:
+    - Installation: installation.md
+    - Quick Start: quickstart.md
+  - Development:
+    - Contributing: CONTRIBUTING.md
+    - MathJax Help: MATHJAX_HELP.md
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/stylesheets/extra.css 
