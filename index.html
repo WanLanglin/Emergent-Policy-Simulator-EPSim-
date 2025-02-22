@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPSim Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="WanLanglin">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .math {
+            overflow-x: auto;
+            margin: 1em 0;
+        }
+        pre {
+            background: #f6f8fa;
+            padding: 1em;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        .author {
+            color: #666;
+            font-style: italic;
+            margin: 1em 0;
+        }
+        footer {
+            margin-top: 2em;
+            padding-top: 1em;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>EPSim (Emergent Policy Simulator)</h1>
+    
+    <p class="author">By <a href="https://github.com/WanLanglin">WanLanglin</a></p>
+    
+    <h2>Core Theoretical Foundations</h2>
+    
+    <h3>Policy Manifold Theory</h3>
+    <p>The policy space forms a Riemannian manifold:</p>
+    <div class="math">
+    $$
+    \mathcal{M}_\pi = \left\{ \theta \in \mathbb{R}^d \ \bigg| \ \frac{\partial^2 \mathcal{L}}{\partial \theta_i \partial \theta_j} = \sum_{k=1}^K \lambda_k \frac{\partial \phi_k}{\partial \theta_i} \otimes \frac{\partial \phi_k}{\partial \theta_j} \right\}
+    $$
+    </div>
+
+    <h3>Parallel Transport</h3>
+    <p>The connection form is defined via Clifford algebra:</p>
+    <div class="math">
+    $$
+    \nabla_X Y = X(Y) + \Gamma_{ij}^k X^i Y^j \frac{\partial}{\partial x^k}
+    $$
+    </div>
+
+    <p>where the Christoffel symbols are computed using:</p>
+    <div class="math">
+    $$
+    \Gamma_{ij}^k = \frac{1}{2}g^{kl}\left(\frac{\partial g_{jl}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)
+    $$
+    </div>
+
+    <h3>Quantum Annealing Integration</h3>
+    <p>The quantum component utilizes adiabatic evolution to find optimal policy parameters. The system evolves according to:</p>
+    <div class="math">
+    $$
+    H(s) = (1-s)H_0 + sH_P
+    $$
+    </div>
+
+    <p>where \(H_0\) is the initial Hamiltonian and \(H_P\) is the problem Hamiltonian encoding the policy optimization objective.</p>
+
+    <footer>
+        <p>View the <a href="https://github.com/WanLanglin/Emergent-Policy-Simulator-EPSim-">source code on GitHub</a></p>
+        <p>© 2024 WanLanglin. Licensed under AGPL v3.</p>
+    </footer>
+</body>
+</html> 

@@ -8,26 +8,26 @@ EPSim combines quantum annealing techniques with geometric algebra to optimize p
 
 ## Documentation
 
-📚 [查看完整文档（含数学公式）](https://wanlanglin.github.io/Emergent-Policy-Simulator-EPSim-/)
+📚 [View Full Documentation with Math Formulas](https://wanlanglin.github.io/Emergent-Policy-Simulator-EPSim-/)
 
-## Quick Formula Preview
+## Formula Preview Options
 
-核心公式可以通过以下方式预览：
+View mathematical formulas through:
 
-1. 在线预览（推荐）：
-   - 访问 [在线文档](https://wanlanglin.github.io/Emergent-Policy-Simulator-EPSim-/)
-   - 或使用 [HackMD预览](https://hackmd.io/) 
-   - 或使用 [StackEdit](https://stackedit.io/app)
+1. Online Preview (Recommended):
+   - Visit [Online Documentation](https://wanlanglin.github.io/Emergent-Policy-Simulator-EPSim-/)
+   - Or use [HackMD](https://hackmd.io/) 
+   - Or use [StackEdit](https://stackedit.io/app)
 
-2. 本地预览：
+2. Local Preview:
    ```bash
-   # 使用VS Code
+   # Using VS Code
    code . 
-   # 安装 Markdown Preview Enhanced 插件
-   # 使用 Ctrl+K V 预览
+   # Install Markdown Preview Enhanced plugin
+   # Use Ctrl+K V to preview
    ```
 
-3. 或使用支持LaTeX的Markdown编辑器如Typora
+3. Or use LaTeX-enabled Markdown editors like Typora
 
 ## Key Features
 
@@ -51,6 +51,10 @@ See `examples/basic_usage.ipynb` for detailed examples.
 - [Core Theory](docs/CORE_THEORY.md)
 - [Algorithms](docs/ALGORITHMS.md)
 - [Experiments](docs/EXPERIMENTS.md)
+
+## Author
+
+- **WanLanglin** - *Initial work* - [GitHub](https://github.com/WanLanglin)
 
 ## License
 
